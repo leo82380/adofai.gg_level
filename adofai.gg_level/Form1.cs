@@ -30,7 +30,7 @@ namespace adofai.gg_level
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1. 나오는 링크 복사\n2. 브라우저의 주소창에 붙여넣기\n3. 다운로드 받기\n4. 압축파일 압축 풀고 얼불춤 레벨 에디터 들어가기\n5. 레벨에디터에서 방금 다운로드한 파일을 열기\n6. 즐기기");
+            MessageBox.Show("1. 버튼 클릭 후 뜨는 창에서 파일 다운로드\n2. 파일 압축 풀고 얼불춤 실행\n3. 레벨 에디터 들어간 후 열기");
         }
     }
 }
