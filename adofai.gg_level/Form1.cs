@@ -22,6 +22,10 @@ namespace adofai.gg_level
         {
             int level2 = level.Next(1, 4734);
             levelcur.Text = "adofai.gg/" + level2;
+            System.Diagnostics.Process compiler = new System.Diagnostics.Process();
+            compiler.StartInfo.FileName = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
+            compiler.StartInfo.Arguments = "https://adofai.gg/levels/" + level2;
+            compiler.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
