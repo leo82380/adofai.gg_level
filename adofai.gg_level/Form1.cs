@@ -20,17 +20,28 @@ namespace adofai.gg_level
 
         private void levelBtn_Click(object sender, EventArgs e)
         {
-            int level2 = level.Next(1, 4734);
-            levelcur.Text = "adofai.gg/levels" + level2;
+            int levels = int.Parse(leveltext.Text);
             System.Diagnostics.Process compiler = new System.Diagnostics.Process();
             compiler.StartInfo.FileName = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
-            compiler.StartInfo.Arguments = "https://adofai.gg/levels/" + level2;
-            compiler.Start();
+            for (int i = 1; i <= levels; i++)
+            {
+                int level2 = level.Next(1, 4734);
+                levelcur.Text = "adofai.gg/levels/" + level2;
+
+                compiler.StartInfo.Arguments = "https://adofai.gg/levels/" + level2;
+                compiler.Start();
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1. 버튼 클릭 후 뜨는 창에서 파일 다운로드\n2. 파일 압축 풀고 얼불춤 실행\n3. 레벨 에디터 들어간 후 열기");
+            MessageBox.Show("1. 원하는 레벨의 개수를 입력하고 버튼 클릭 후 뜨는 창에서 파일 다운로드\n2. 파일 압축 풀고 얼불춤 실행\n3. 레벨 에디터 들어간 후 열기\n\n경고: 너무 큰 수를 입력하면 멈춤");
+        }
+
+        private void leveltext_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
