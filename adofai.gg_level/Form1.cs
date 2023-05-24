@@ -21,15 +21,22 @@ namespace adofai.gg_level
         private void levelBtn_Click(object sender, EventArgs e)
         {
             int levels = int.Parse(leveltext.Text);
+            if(levels > 10)
+            {
+                levelcur.Text = "너무 큽니다.";
+            }
             System.Diagnostics.Process compiler = new System.Diagnostics.Process();
             compiler.StartInfo.FileName = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
-            for (int i = 1; i <= levels; i++)
+            if (levels <= 10)
             {
-                int level2 = level.Next(1, 4734);
-                levelcur.Text = "adofai.gg/levels/" + level2;
+                for (int i = 1; i <= levels; i++)
+                {
+                    int level2 = level.Next(1, 4734);
+                    levelcur.Text = "adofai.gg/levels/" + level2;
 
-                compiler.StartInfo.Arguments = "https://adofai.gg/levels/" + level2;
-                compiler.Start();
+                    compiler.StartInfo.Arguments = "https://adofai.gg/levels/" + level2;
+                    compiler.Start();
+                }
             }
             
         }

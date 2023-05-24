@@ -29,12 +29,15 @@ namespace adofai.gg_level
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.levelBtn = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.levelcur = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.leveltext = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // levelBtn
@@ -58,7 +61,7 @@ namespace adofai.gg_level
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(433, 91);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "얼불춤 레벨 추천";
+            this.textBox2.Text = "얼불춤 레벨 추첨기";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // levelcur
@@ -103,19 +106,32 @@ namespace adofai.gg_level
             this.label1.TabIndex = 6;
             this.label1.Text = "레벨 개수 입력";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(257, 235);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 147);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 411);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.leveltext);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.levelcur);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.levelBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "얼불춤 레벨 추천";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,6 +145,7 @@ namespace adofai.gg_level
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox leveltext;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
